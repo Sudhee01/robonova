@@ -17,33 +17,57 @@ export const Route = createFileRoute("/products")({
 
 function ProductsPage() {
   return (
-    <>
-      <PageHeader
-        eyebrow="Products"
-        title={<>ROBONOVA <span className="gradient-text">hardware lineup</span></>}
-        description="Designed by students for students — affordable robotics kits to kickstart your engineering journey."
-      />
-      <section className="py-20">
-        <div className="container-page grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {products.map((p, i) => (
-            <Reveal key={p.name} delay={i * 80}>
-              <div className="group flex h-full flex-col rounded-3xl glass-strong p-6 shadow-elegant transition-smooth hover:-translate-y-1 hover:shadow-glow">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-primary text-primary-foreground shadow-glow">
-                  <Package className="h-5 w-5" />
-                </span>
-                <h3 className="mt-5 text-lg font-semibold">{p.name}</h3>
-                <p className="mt-1 text-sm text-muted-foreground flex-1">{p.desc}</p>
-                <div className="mt-5 flex items-center justify-between">
-                  <span className="font-display text-xl font-bold gradient-text">{p.price}</span>
-                  <button className="grid h-10 w-10 place-items-center rounded-full bg-gradient-primary text-primary-foreground shadow-glow hover:scale-105 transition-smooth">
-                    <ShoppingCart className="h-4 w-4" />
-                  </button>
-                </div>
-              </div>
-            </Reveal>
-          ))}
+    <section className="relative min-h-screen overflow-hidden bg-gradient-to-br from-orange-50 via-white to-orange-100 py-24">
+      
+      {/* Background Blur Effects */}
+      <div className="absolute top-20 left-10 h-72 w-72 rounded-full bg-orange-300/30 blur-3xl"></div>
+      <div className="absolute bottom-10 right-10 h-96 w-96 rounded-full bg-orange-200/40 blur-3xl"></div>
+
+      <div className="container-page relative z-10 flex items-center justify-center">
+        
+        {/* Glass Card */}
+        <div className="glass-strong rounded-[40px] border border-white/30 bg-white/20 p-14 shadow-2xl backdrop-blur-xl text-center max-w-3xl">
+          
+          {/* Small Tag */}
+          <div className="mb-6 inline-flex items-center rounded-full bg-orange-100 px-5 py-2 text-sm font-semibold tracking-wide text-orange-600 shadow-md">
+            ROBONOVA PRODUCTS
+          </div>
+
+          {/* Main Heading */}
+          <h1 className="font-display text-5xl md:text-7xl font-black leading-tight text-slate-900">
+            Coming{" "}
+            <span className="bg-gradient-to-r from-orange-500 via-orange-400 to-amber-500 bg-clip-text text-transparent">
+              Soon
+            </span>
+          </h1>
+
+          {/* Subtitle */}
+          <p className="mt-6 text-lg leading-relaxed text-slate-600 md:text-xl">
+            Our innovative robotics kits, automation hardware, and AI-powered
+            products are currently under development.
+          </p>
+
+          <p className="mt-3 text-base text-slate-500">
+            Stay connected with ROBONOVA for exciting launches and future updates.
+          </p>
+
+          {/* Decorative Line */}
+          <div className="mx-auto mt-10 h-1 w-32 rounded-full bg-gradient-to-r from-orange-400 to-orange-600"></div>
+
+          {/* Bottom Text */}
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4 text-sm font-medium text-slate-500">
+            <span className="rounded-full bg-white/60 px-4 py-2 shadow">
+              Robotics Kits
+            </span>
+            <span className="rounded-full bg-white/60 px-4 py-2 shadow">
+              AI Projects
+            </span>
+            <span className="rounded-full bg-white/60 px-4 py-2 shadow">
+              Automation Systems
+            </span>
+          </div>
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
