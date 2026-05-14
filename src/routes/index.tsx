@@ -68,9 +68,9 @@ function Hero() {
             ROBO<span className="gradient-text">NOVA</span>
             <br />
             <span className="text-foreground/80 text-4xl md:text-5xl font-semibold">
-              Engineering tomorrow,
+              Engineering Innovation Through
             </span>{" "}
-            <span className="gradient-text text-4xl md:text-5xl font-semibold">today.</span>
+            <span className="gradient-text text-4xl md:text-5xl font-semibold">Robotics & AI</span>
           </h1>
           <p className="mt-6 max-w-xl text-lg text-muted-foreground animate-fade-up">
             Empowering students through robotics, automation, AI innovation and
