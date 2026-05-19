@@ -5,7 +5,7 @@ import g2 from "@/assets/gallery-2.jpg";
 import g3 from "@/assets/gallery-3.jpg";
 import g4 from "@/assets/gallery-4.jpg";
 import p1 from "@/assets/project-1.jpg";
-import p2 from "@/assets/project-2.jpg";
+import p2 from "@/assets/project-2.png";
 import p3 from "@/assets/project-3.jpg";
 import p4 from "@/assets/project-4.png";
 
