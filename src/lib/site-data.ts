@@ -69,22 +69,22 @@ export const projects = [
 ];
 
 export const mentors = [
-  { name: "Dr. Adithya Hegde", role: "Faculty Advisor", dept: "Dept. of RI", desc: "20+ years in embedded systems and robotics research." },
-  { name: "Prof. Suraj Bhat", role: "Co-Coordinator", dept: "Dept. of MT", desc: "Guides mechanical design and rapid prototyping projects.." },
+  { name: "Dr. Adithya Hegde", role: "Faculty Advisor", dept: "Dept. of RI", desc: "4 years in embedded systems and robotics research.", image: "/public/team/dr.adithya.png" },
+  { name: "Prof. Suraj Bhat", role: "Co-Coordinator", dept: "Dept. of MT", desc: "Guides mechanical design and rapid prototyping projects.", image: "/public/team/dr.suraj.jpg" },
 ];
 
 export const leaders = [
-  { name: "Pratheek A G", role: "President", year: "Final Year, MT" },
-  { name: "Amshul R", role: "Secretary", year: "Final Year, MT" },
-  { name: "Krishna Prasad ", role: "Technical Head", year: "Final Year, MT" },
-  { name: "Zuhair", role: "Technical Head", year: "Final Year, MT" },
-  { name: "Mohan Raj O", role: "Project Head", year: "Final Year, MT" },
-  { name: "Sankeerthan", role: "Event Coordinator", year: "Third Year, MT" },
-  { name: "Manjith M Hegde", role: "Treasurer", year: "Third Year, MT" },
-  { name: "Sukisha", role: "Design & Fabrication Lead", year: "Third Year, MT" },
-  { name: "Nidhi Bangera", role: "Electronics & Control Lead", year: "Third Year, MT" },
-  { name: "Shravan Kumar", role: "Programming & AI Lead", year: "Third Year, MT" },
-  { name: "Suraj S Shetty", role: "Media & Publicity Lead", year: "Third Year, MT" },
+  { name: "Pratheek A G", role: "President", year: "Final Year, MT", image: "/public/team/pratheek.jpg" },
+  { name: "Amshul R", role: "Secretary", year: "Final Year, MT", image: "/public/team/amshul.jpg" },
+  { name: "Krishna Prasad ", role: "Technical Head", year: "Final Year, MT", image: "/public/team/krishna.jpg" },
+  { name: "Zuhair", role: "Technical Head", year: "Final Year, MT", image: "/public/team/zuhair.jpg" },
+  { name: "Mohan Raj O", role: "Project Head", year: "Final Year, MT", image: "/public/team/mohan.jpg" },
+  { name: "Sankeerthan", role: "Event Coordinator", year: "Third Year, MT", image: "/public/team/sankeerthan.jpg" },
+  { name: "Manjith M Hegde", role: "Treasurer", year: "Third Year, MT", image: "/public/team/manjith.jpg" },
+  { name: "Sukisha", role: "Design & Fabrication Lead", year: "Third Year, MT", image: "/public/team/sukisha.jpg" },
+  { name: "Nidhi Bangera", role: "Electronics & Control Lead", year: "Third Year, MT", image: "/public/team/nidhi.jpg" },
+  { name: "Shravan Kumar", role: "Programming & AI Lead", year: "Third Year, MT", image: "/public/team/shravan.jpg" },
+  { name: "Suraj S Shetty", role: "Media & Publicity Lead", year: "Third Year, MT", image: "/public/team/suraj.jpg" },
 ];
 
 export const members = [
