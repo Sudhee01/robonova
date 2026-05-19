@@ -18,6 +18,7 @@ export const navLinks = [
   { to: "/members", label: "Members" },
   { to: "/projects", label: "Projects" },
   { to: "/products", label: "Products" },
+  { to: "/events", label: "Events" }, 
   { to: "/contact", label: "Contact" },
 ] as const;
 
@@ -84,11 +85,11 @@ export const leaders = [
 ];
 
 export const members = [
-  { dept: "Computer Science", count: 38 },
-  { dept: "Electronics & Comm.", count: 34 },
-  { dept: "Electrical & Electronics", count: 22 },
+  { dept: "Computer Science", count: 5 },
+  { dept: "Electronics & Comm.", count: 5 },
   { dept: "Mechanical", count: 18 },
   { dept: "Information Science", count: 8 },
+  { dept: "Mechatronics", count: 30},
 ];
 
 export const products = [
@@ -109,3 +110,103 @@ export const timeline = [
 ];
 
 export const gallery = [g1, g2, g3, g4, g1, g2];
+
+export type EventStatus = "upcoming" | "ongoing" | "completed";
+ 
+export interface ClubEvent {
+  id: string;
+  title: string;
+  date: string;          // display string, e.g. "June 14, 2025"
+  time: string;          // e.g. "10:00 AM – 4:00 PM"
+  venue: string;
+  category: string;      // e.g. "Workshop", "Competition", "Seminar"
+  status: EventStatus;
+  desc: string;
+  highlights?: string[]; // bullet points shown on completed events
+  registrationUrl?: string; // link for upcoming events
+}
+ 
+export const events: ClubEvent[] = [
+  // ── UPCOMING ──────────────────────────────────────────────────────────────
+  {
+    id: "evt-001",
+    title: "Robo Starter Workshop",
+    date: "June 14, 2026",
+    time: "10:00 AM – 4:00 PM",
+    venue: "Innovation Lab, MITE Campus",
+    category: "Workshop",
+    status: "upcoming",
+    desc: "A hands-on full-day workshop for beginners covering Arduino basics, sensor integration and building your first autonomous bot.",
+    registrationUrl: "/contact",
+  },
+  {
+    id: "evt-002",
+    title: "Line Follower Challenge 2026",
+    date: "July 5, 2026",
+    time: "9:00 AM – 6:00 PM",
+    venue: "Main Auditorium, MITE",
+    category: "Competition",
+    status: "upcoming",
+    desc: "Inter-college autonomous line follower competition open to all engineering colleges. Prizes worth ₹50,000.",
+    registrationUrl: "/contact",
+  },
+  {
+    id: "evt-003",
+    title: "AI in Robotics – Guest Lecture",
+    date: "July 20, 2026",
+    time: "2:00 PM – 5:00 PM",
+    venue: "Seminar Hall B, MITE",
+    category: "Seminar",
+    status: "upcoming",
+    desc: "Industry expert talk on integrating machine learning with real-time robotic systems. Open to all students.",
+    registrationUrl: "/contact",
+  },
+ 
+  // ── COMPLETED ─────────────────────────────────────────────────────────────
+  {
+    id: "evt-004",
+    title: "ROBONOVA Fest 2025",
+    date: "March 8–10, 2025",
+    time: "9:00 AM – 8:00 PM",
+    venue: "MITE Campus",
+    category: "Fest",
+    status: "completed",
+    desc: "Our flagship 3-day national robotics festival featuring competitions, workshops and industry showcases.",
+    highlights: [
+      "50+ teams from 20 colleges across India",
+      "₹1.5 lakh prize pool across 6 events",
+      "Live drone racing and autonomous car demo",
+      "Industry stalls from 5 robotics companies",
+    ],
+  },
+  {
+    id: "evt-005",
+    title: "PCB Design Bootcamp",
+    date: "January 18, 2025",
+    time: "10:00 AM – 5:00 PM",
+    venue: "ECE Lab 3, MITE",
+    category: "Workshop",
+    status: "completed",
+    desc: "Intensive bootcamp on PCB layout, EasyEDA tools and fabrication workflow. 60 students participated.",
+    highlights: [
+      "60 participants from ECE and EEE departments",
+      "Hands-on PCB design using EasyEDA",
+      "Each participant took home a fabricated board",
+    ],
+  },
+  {
+    id: "evt-006",
+    title: "Drone Pilot Certification Camp",
+    date: "November 22, 2024",
+    time: "8:00 AM – 6:00 PM",
+    venue: "MITE Open Ground",
+    category: "Workshop",
+    status: "completed",
+    desc: "Outdoor drone flying camp covering regulations, assembly and hands-on flight training.",
+    highlights: [
+      "30 students certified as drone pilots",
+      "Covered DGCA guidelines and safety protocols",
+      "Each student flew a real quadcopter",
+    ],
+  },
+];
