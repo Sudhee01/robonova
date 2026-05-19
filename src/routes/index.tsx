@@ -540,7 +540,7 @@ function Contact() {
           <ul className="mt-8 grid gap-4">
             {[
               { icon: Mail, label: "robonova@mite.ac.in" },
-              { icon: Phone, label: "+91 98765 43210" },
+              { icon: Phone, label: "+91 78999 35978" },
               { icon: MapPin, label: "MITE Campus, Moodabidri, Karnataka 574225" },
             ].map((c) => (
               <li key={c.label} className="flex items-center gap-3">
