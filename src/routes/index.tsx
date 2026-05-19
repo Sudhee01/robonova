@@ -149,7 +149,7 @@ function About() {
     {
       icon: Cpu,
       title: "Mission",
-      text: "Promote robotics learning, conduct workshops & competitions, encourage innovation and teamwork, and build real-world engineering solutions.",
+      text: "To give hands-on training, workshops, and projects that enhance technical skills in robotics, electronics, and programming.",
     },
     {
       icon: Lightbulb,
@@ -191,6 +191,51 @@ function About() {
       </div>
     </section>
   );
+    {/* ── Mission Detail Section ── */}
+    <section className="py-20 bg-gradient-soft">
+    <div className="container-page">
+    <Reveal>
+      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
+        Our Mission
+      </p>
+      <h2 className="mt-2 max-w-2xl font-display text-3xl font-bold md:text-4xl">
+        What we <span className="gradient-text">stand for</span>
+      </h2>
+    </Reveal>
+
+    <div className="mt-10 grid gap-5 md:grid-cols-2">
+      {[
+        {
+          number: "01",
+          text: "To give hands-on training, workshops, and projects that enhance technical skills in robotics, electronics, and programming.",
+        },
+        {
+          number: "02",
+          text: "To foster teamwork, leadership, and problem-solving through collaborative robotic challenges while preparing and participating in local, national, and international competitions.",
+        },
+        {
+          number: "03",
+          text: "To encourage curiosity and experimentation by supporting student-led robotic research and innovation projects.",
+        },
+        {
+          number: "04",
+          text: "To bridge the gap between academia and industry by promoting practical robotic applications aligned with real-world demands.",
+        },
+      ].map((m, i) => (
+        <Reveal key={m.number} delay={i * 80}>
+          <div className="group h-full rounded-3xl glass-strong p-6 shadow-elegant transition-smooth hover:-translate-y-1 hover:shadow-glow flex gap-5">
+            <span className="font-display text-4xl font-bold gradient-text opacity-40 leading-none select-none">
+              {m.number}
+            </span>
+            <p className="text-sm text-muted-foreground leading-relaxed mt-1">
+              {m.text}
+            </p>
+          </div>
+        </Reveal>
+      ))}
+    </div>
+  </div>
+</section>
 }
 
 /* ---------------- Stats ---------------- */

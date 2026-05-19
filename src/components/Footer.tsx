@@ -56,7 +56,7 @@ export function Footer() {
               <li>MITE Campus, Moodabidri</li>
               <li>Karnataka 574225, India</li>
               <li>robonova@mite.ac.in</li>
-              <li>+91 98765 43210</li>
+              <li>+91 78999 35978</li>
             </ul>
           </div>
         </div>

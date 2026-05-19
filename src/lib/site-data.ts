@@ -71,17 +71,20 @@ export const projects = [
 export const mentors = [
   { name: "Dr. Adithya Hegde", role: "Faculty Advisor", dept: "Dept. of RI", desc: "20+ years in embedded systems and robotics research." },
   { name: "Prof. Suraj Bhat", role: "Co-Coordinator", dept: "Dept. of MT", desc: "Guides mechanical design and rapid prototyping projects.." },
-  { name: "Dr. Mahesh N.", role: "Innovation Mentor", dept: "Dept. of Mech", desc: "AI & computer vision specialist mentoring student innovators." },
-  { name: "Prof. Kavya Shetty", role: "Workshop Lead", dept: "Dept. of EEE", desc: "Drives hands-on training in power electronics and automation." },
 ];
 
 export const leaders = [
-  { name: "Sankeerthan S Prabhu", role: "President", year: "Third Year, MT" },
-  { name: "Nidhi Hegde", role: "Vice President", year: "Final Year, CSE" },
-  { name: "Rohan Shenoy", role: "Technical Lead", year: "Third Year, ECE" },
-  { name: "Ananya Bhat", role: "Design Lead", year: "Third Year, Mech" },
-  { name: "Karthik Rao", role: "Events Head", year: "Third Year, EEE" },
-  { name: "Sneha Kamath", role: "Outreach Head", year: "Second Year, CSE" },
+  { name: "Pratheek A G", role: "President", year: "Final Year, MT" },
+  { name: "Amshul R", role: "Secretary", year: "Final Year, MT" },
+  { name: "Krishna Prasad ", role: "Technical Head", year: "Final Year, MT" },
+  { name: "Zuhair", role: "Technical Head", year: "Final Year, MT" },
+  { name: "Mohan Raj O", role: "Project Head", year: "Final Year, MT" },
+  { name: "Sankeerthan", role: "Event Coordinator", year: "Third Year, MT" },
+  { name: "Manjith M Hegde", role: "Treasurer", year: "Third Year, MT" },
+  { name: "Sukisha", role: "Design & Fabrication Lead", year: "Third Year, MT" },
+  { name: "Nidhi Bangera", role: "Electronics & Control Lead", year: "Third Year, MT" },
+  { name: "Shravan Kumar", role: "Programming & AI Lead", year: "Third Year, MT" },
+  { name: "Suraj S Shetty", role: "Media & Publicity Lead", year: "Third Year, MT" },
 ];
 
 export const members = [
@@ -133,7 +136,7 @@ export const events: ClubEvent[] = [
     title: "Robo Starter Workshop",
     date: "June 14, 2026",
     time: "10:00 AM – 4:00 PM",
-    venue: "Innovation Lab, MITE Campus",
+    venue: "Innovation Centre, MITE Campus",
     category: "Workshop",
     status: "upcoming",
     desc: "A hands-on full-day workshop for beginners covering Arduino basics, sensor integration and building your first autonomous bot.",
@@ -155,7 +158,7 @@ export const events: ClubEvent[] = [
     title: "AI in Robotics – Guest Lecture",
     date: "July 20, 2026",
     time: "2:00 PM – 5:00 PM",
-    venue: "Seminar Hall B, MITE",
+    venue: "Innovation Centre, MITE",
     category: "Seminar",
     status: "upcoming",
     desc: "Industry expert talk on integrating machine learning with real-time robotic systems. Open to all students.",
