@@ -69,14 +69,14 @@ export const projects = [
 ];
 
 export const mentors = [
-  { name: "Dr. Anil Kumar", role: "Faculty Advisor", dept: "Dept. of ECE", desc: "20+ years in embedded systems and robotics research." },
-  { name: "Prof. Shreya Rao", role: "Co-Coordinator", dept: "Dept. of CSE", desc: "AI & computer vision specialist mentoring student innovators." },
-  { name: "Dr. Mahesh N.", role: "Innovation Mentor", dept: "Dept. of Mech", desc: "Guides mechanical design and rapid prototyping projects." },
+  { name: "Dr. Adithya Hegde", role: "Faculty Advisor", dept: "Dept. of RI", desc: "20+ years in embedded systems and robotics research." },
+  { name: "Prof. Suraj Bhat", role: "Co-Coordinator", dept: "Dept. of MT", desc: "Guides mechanical design and rapid prototyping projects.." },
+  { name: "Dr. Mahesh N.", role: "Innovation Mentor", dept: "Dept. of Mech", desc: "AI & computer vision specialist mentoring student innovators." },
   { name: "Prof. Kavya Shetty", role: "Workshop Lead", dept: "Dept. of EEE", desc: "Drives hands-on training in power electronics and automation." },
 ];
 
 export const leaders = [
-  { name: "Arjun Pai", role: "President", year: "Final Year, ECE" },
+  { name: "Sankeerthan S Prabhu", role: "President", year: "Third Year, MT" },
   { name: "Nidhi Hegde", role: "Vice President", year: "Final Year, CSE" },
   { name: "Rohan Shenoy", role: "Technical Lead", year: "Third Year, ECE" },
   { name: "Ananya Bhat", role: "Design Lead", year: "Third Year, Mech" },
