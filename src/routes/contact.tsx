@@ -21,29 +21,37 @@ function ContactPage() {
   const [status, setStatus] = useState<Status>("idle");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("loading");
+  e.preventDefault();
+  setStatus("loading");
 
-    const form = e.currentTarget;
+  const form = e.currentTarget;
+  const data = {
+    name: (form.elements.namedItem("name") as HTMLInputElement).value,
+    email: (form.elements.namedItem("email") as HTMLInputElement).value,
+    subject: (form.elements.namedItem("subject") as HTMLInputElement).value,
+    message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+  };
 
-    try {
-      const res = await fetch("https://formspree.io/f/xzdwzyyj", {
-        method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" },
-      });
+  try {
+    const res = await fetch("https://formspree.io/f/xzdwzyyj", {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",  // ← key change
+      },
+    });
 
-      if (res.ok) {
-        setStatus("success");
-        form.reset();
-      } else {
-        setStatus("error");
-      }
-    } catch {
+    if (res.ok) {
+      setStatus("success");
+      form.reset();
+    } else {
       setStatus("error");
     }
+  } catch {
+    setStatus("error");
   }
-
+}
   return (
     <>
       <PageHeader
