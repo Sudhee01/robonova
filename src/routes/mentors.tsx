@@ -28,10 +28,18 @@ function MentorsPage() {
             <Reveal key={m.name} delay={i * 80}>
               <div className="group h-full rounded-3xl glass-strong p-6 text-center shadow-elegant transition-smooth hover:-translate-y-1 hover:shadow-glow">
                 <div className="mx-auto h-28 w-28 rounded-full bg-gradient-primary p-1 shadow-glow">
-                  <div className="grid h-full w-full place-items-center rounded-full bg-background font-display text-3xl font-bold gradient-text">
-                    {m.name.split(" ").slice(-2).map((s) => s[0]).join("")}
-                  </div>
+                {m.image ? (
+                <img
+                src={m.image}
+                alt={m.name}
+                className="h-full w-full rounded-full object-cover"
+                />
+                ) : (
+                <div className="grid h-full w-full place-items-center rounded-full bg-background font-display text-3xl font-bold gradient-text">
+                {m.name.split(" ").slice(-2).map((s: string) => s[0]).join("")}
                 </div>
+                )}
+              </div>
                 <h3 className="mt-4 text-lg font-semibold">{m.name}</h3>
                 <p className="text-sm font-medium text-primary">{m.role}</p>
                 <p className="text-xs text-muted-foreground">{m.dept}</p>

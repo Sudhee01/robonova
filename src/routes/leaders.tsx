@@ -30,9 +30,19 @@ function LeadersPage() {
               <div className="group relative overflow-hidden rounded-3xl glass-strong p-6 shadow-elegant transition-smooth hover:-translate-y-1 hover:shadow-glow">
                 <div className="absolute -top-10 -right-10 h-40 w-40 rounded-full bg-gradient-primary opacity-10 blur-2xl transition-smooth group-hover:opacity-30" />
                 <div className="flex items-center gap-4">
-                  <div className="grid h-16 w-16 place-items-center rounded-2xl bg-gradient-primary text-primary-foreground shadow-glow font-display text-xl font-bold">
-                    {l.name.split(" ").map((s) => s[0]).join("")}
+                  <div className="h-16 w-16 rounded-2xl bg-gradient-primary p-0.5 shadow-glow shrink-0">
+                    {l.image ? (
+                    <img
+                    src={l.image}
+                    alt={l.name}
+                    className="h-full w-full rounded-2xl object-cover"
+                    />
+                    ) : (
+                  <div className="grid h-full w-full place-items-center rounded-2xl bg-background font-display text-xl font-bold gradient-text">
+                    {l.name.split(" ").map((s: string) => s[0]).join("")}
                   </div>
+                  )}
+                </div>
                   <div>
                     <h3 className="text-lg font-semibold">{l.name}</h3>
                     <p className="text-xs text-muted-foreground">{l.year}</p>
