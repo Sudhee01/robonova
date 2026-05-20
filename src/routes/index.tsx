@@ -10,7 +10,6 @@ import {
   ChevronRight,
   X,
   Cpu,
-  Wrench,
   Trophy,
   Calendar,
   Mail,
@@ -41,6 +40,7 @@ function HomePage() {
     <>
       <Hero />
       <About />
+      <MissionDetail />
       <Stats />
       <Gallery />
       <ProjectsPreview />
@@ -144,12 +144,12 @@ function About() {
     {
       icon: Target,
       title: "Vision",
-      text: "To inspire innovation and technical excellence in robotics, automation and intelligent systems while empowering students to become future technology leaders.",
+      text: "To accomplish excellence in Robotics, Artificial Intelligence, and Mechatronics by fostering innovation, interdisciplinary learning, and socially responsible technological solutions for real-world and societal challenges.",
     },
     {
       icon: Cpu,
       title: "Mission",
-      text: "To give hands-on training, workshops, and projects that enhance technical skills in robotics, electronics, and programming.",
+      text: "To provide strong knowledge and hands-on experience in Robotics, Artificial Intelligence, and Mechatronics, fostering technical competence and innovation.",
     },
     {
       icon: Lightbulb,
@@ -191,51 +191,58 @@ function About() {
       </div>
     </section>
   );
-    {/* ── Mission Detail Section ── */}
-    <section className="py-20 bg-gradient-soft">
-    <div className="container-page">
-    <Reveal>
-      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
-        Our Mission
-      </p>
-      <h2 className="mt-2 max-w-2xl font-display text-3xl font-bold md:text-4xl">
-        What we <span className="gradient-text">stand for</span>
-      </h2>
-    </Reveal>
+}
 
-    <div className="mt-10 grid gap-5 md:grid-cols-2">
-      {[
-        {
-          number: "01",
-          text: "To give hands-on training, workshops, and projects that enhance technical skills in robotics, electronics, and programming.",
-        },
-        {
-          number: "02",
-          text: "To foster teamwork, leadership, and problem-solving through collaborative robotic challenges while preparing and participating in local, national, and international competitions.",
-        },
-        {
-          number: "03",
-          text: "To encourage curiosity and experimentation by supporting student-led robotic research and innovation projects.",
-        },
-        {
-          number: "04",
-          text: "To bridge the gap between academia and industry by promoting practical robotic applications aligned with real-world demands.",
-        },
-      ].map((m, i) => (
-        <Reveal key={m.number} delay={i * 80}>
-          <div className="group h-full rounded-3xl glass-strong p-6 shadow-elegant transition-smooth hover:-translate-y-1 hover:shadow-glow flex gap-5">
-            <span className="font-display text-4xl font-bold gradient-text opacity-40 leading-none select-none">
-              {m.number}
-            </span>
-            <p className="text-sm text-muted-foreground leading-relaxed mt-1">
-              {m.text}
-            </p>
-          </div>
+/* ---------------- Mission Detail ---------------- */
+function MissionDetail() {
+  const missions = [
+    {
+      number: "01",
+      text: "To provide strong knowledge and hands-on experience in Robotics, Artificial Intelligence, and Mechatronics, fostering technical competence and innovation.",
+    },
+    {
+      number: "02",
+      text: "To equip students with modern tools, technologies, and practical skills required to solve real-world engineering and societal challenges.",
+    },
+    {
+      number: "03",
+      text: "To promote interdisciplinary learning, research, and entrepreneurial thinking to develop innovative and impactful solutions.",
+    },
+    {
+      number: "04",
+      text: "To cultivate teamwork, leadership, ethical values, and a mindset of continuous learning for global technological advancement.",
+    },
+  ];
+
+  return (
+    <section className="py-20 bg-gradient-soft">
+      <div className="container-page">
+        <Reveal>
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-primary">
+            Our Mission
+          </p>
+          <h2 className="mt-2 max-w-2xl font-display text-3xl font-bold md:text-4xl">
+            What we <span className="gradient-text">stand for</span>
+          </h2>
         </Reveal>
-      ))}
-    </div>
-  </div>
-</section>
+
+        <div className="mt-10 grid gap-5 md:grid-cols-2">
+          {missions.map((m, i) => (
+            <Reveal key={m.number} delay={i * 80}>
+              <div className="group h-full rounded-3xl glass-strong p-6 shadow-elegant transition-smooth hover:-translate-y-1 hover:shadow-glow flex gap-5">
+                <span className="font-display text-4xl font-bold gradient-text opacity-40 leading-none select-none">
+                  {m.number}
+                </span>
+                <p className="text-sm text-muted-foreground leading-relaxed mt-1">
+                  {m.text}
+                </p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 }
 
 /* ---------------- Stats ---------------- */
@@ -453,13 +460,17 @@ function MentorsPreview() {
             <Reveal key={m.name} delay={i * 80}>
               <div className="group h-full rounded-3xl glass-strong p-6 text-center shadow-elegant transition-smooth hover:-translate-y-1 hover:shadow-glow">
                 <div className="mx-auto h-24 w-24 rounded-full bg-gradient-primary p-1 shadow-glow">
-                  <div className="grid h-full w-full place-items-center rounded-full bg-background font-display text-2xl font-bold gradient-text">
-                    {m.name
-                      .split(" ")
-                      .slice(-2)
-                      .map((s) => s[0])
-                      .join("")}
-                  </div>
+                  {m.image ? (
+                    <img
+                      src={m.image}
+                      alt={m.name}
+                      className="h-full w-full rounded-full object-cover"
+                    />
+                  ) : (
+                    <div className="grid h-full w-full place-items-center rounded-full bg-background font-display text-2xl font-bold gradient-text">
+                      {m.name.split(" ").slice(-2).map((s: string) => s[0]).join("")}
+                    </div>
+                  )}
                 </div>
                 <h3 className="mt-4 text-lg font-semibold">{m.name}</h3>
                 <p className="text-sm font-medium text-primary">{m.role}</p>
