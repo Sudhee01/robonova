@@ -132,8 +132,8 @@ export const projects: Project[] = [
 ];
 
 export const mentors = [
-  { name: "Dr. Adithya Hegde", role: "Faculty Advisor", dept: "Dept. of RI", desc: "4 years in embedded systems and robotics research.", image: "/team/dr.adithya.png" },
-  { name: "Prof. Suraj Bhat", role: "Co-Coordinator", dept: "Dept. of MT", desc: "Guides mechanical design and rapid prototyping projects.", image: "/team/dr.suraj.jpg" },
+  { name: "Dr. Adithya Hegde", role: "Faculty Advisor", dept: "Dept. of RI", desc: "4 years in mechanical testing and robotics research.", image: "/team/dr.adithya.png" },
+  { name: "Prof. Suraj Bhat", role: "Co-Coordinator", dept: "Dept. of MT", desc: "Guides Product design and rapid prototyping projects.", image: "/team/dr.suraj.jpg" },
 ];
 
 export const leaders = [
