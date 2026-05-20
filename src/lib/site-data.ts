@@ -219,17 +219,6 @@ export const events: ClubEvent[] = [
   image: "/events/arduino-workshop.jpg",
 },
   {
-    id: "evt-001",
-    title: "Arduino, Microcontrollers & Embedded Systems Workshop",
-    date: "June 23, 2026",
-    time: "1:00 PM – 3:30 PM",
-    venue: "Robo Club PG Block, MITE Campus",
-    category: "Workshop",
-    status: "upcoming",
-    desc: "A hands-on workshop covering Arduino programming, microcontroller basics and embedded systems design. Open to all MITE students with beginner to intermediate experience.",
-    registrationUrl: "/contact",
-  },
-  {
     id: "evt-002",
     title: "Robo Wars Inter-College Competition",
     date: "July 5, 2026",

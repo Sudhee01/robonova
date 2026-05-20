@@ -106,6 +106,15 @@ function EventsPage() {
                           : "bg-muted-foreground/30"
                       }`}
                     />
+                    {event.image && (
+                    <div className="overflow-hidden rounded-none">
+                    <img
+                    src={event.image}
+                    alt={event.title}
+                    className="w-full object-cover max-h-52 hover:scale-105 transition-smooth"
+                    />
+                    </div>
+                  )}
 
                     <div className="flex flex-col gap-4 p-6 flex-1">
                       {/* Category + Status row */}
