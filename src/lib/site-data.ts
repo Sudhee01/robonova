@@ -149,6 +149,7 @@ export const leaders = [
   { name: "Nidhi Bangera", role: "Electronics & Control Lead", year: "Third Year, MT", image: "/team/nidhi.jpg" },
   { name: "Shravan Kumar", role: "Programming & AI Lead", year: "Third Year, MT", image: "/team/shravan.jpg" },
   { name: "Suraj S Shetty", role: "Media & Publicity Lead", year: "Third Year, MT", image: "/team/suraj.jpg" },
+  { name: "Sudheeksha Vishwanath", role: "Website Builder", year: "Third Year, CSE", image: "/team/sudheeksha.jpeg" },
 ];
 
 export const members = [
