@@ -279,3 +279,13 @@ export const events: ClubEvent[] = [
     ],
   },
 ];
+
+export const achievements = [
+  "Won 'Bot Soccer' at TIARA 2019, a national level technical fest at St. Joseph Engg College",
+  "Won 'Robo Race' at Tech Yuva 2019 held at Srinivas University",
+  "Won 'Robo Soccer' at AJIET AAKAR 2019, a state level techno cultural event",
+  "Won 'Robo Sumo' at St. Joseph Engg College",
+  "Won 2nd place in 'Bot Hockey' at NITK Surathkal",
+  "Won 'Robo Soccer' at Incredia 19, NITTE",
+  "Emerged as 2nd runner up in 'Bot Soccer' at NIT Goa",
+];
