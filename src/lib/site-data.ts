@@ -6,6 +6,7 @@ import p1 from "@/assets/project-1.jpg";
 import p2 from "@/assets/project-2.png";
 import p3 from "@/assets/project-3.jpg";
 import p4 from "@/assets/project-4.png";
+import arduinoWorkshop from "@/assets/arduino-workshop.jpeg";
 
 export const assets = { logo, heroRobot, g1, g2, p1, p2, p3, p4 };
 
@@ -216,7 +217,7 @@ export const events: ClubEvent[] = [
     "Open to ROBONOVA members only",
   ],
   registrationUrl: "/contact",
-  image: "/events/arduino-workshop.jpg",
+  image: arduinoWorkshop,
 },
   {
     id: "evt-002",
