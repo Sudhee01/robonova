@@ -94,9 +94,9 @@ function Hero() {
 
           <div className="mt-10 grid max-w-md grid-cols-3 gap-4">
             {[
-              { k: "120+", v: "Members" },
-              { k: "45+", v: "Projects" },
-              { k: "30+", v: "Workshops" },
+              { k: "70+", v: "Members" },
+              { k: "10+", v: "Projects" },
+              { k: "25+", v: "Competitions" },
             ].map((s) => (
               <div key={s.v} className="rounded-xl glass p-3 text-center">
                 <div className="text-xl font-bold gradient-text">{s.k}</div>

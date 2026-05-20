@@ -1,15 +1,14 @@
 import logo from "@/assets/robonova-logo.png";
 import heroRobot from "@/assets/hero-robot.jpg";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
+import g1 from "@/assets/gallery-1.png";
+import g2 from "@/assets/gallery-2.png";
 import g4 from "@/assets/gallery-4.jpg";
 import p1 from "@/assets/project-1.jpg";
 import p2 from "@/assets/project-2.png";
 import p3 from "@/assets/project-3.jpg";
 import p4 from "@/assets/project-4.png";
 
-export const assets = { logo, heroRobot, g1, g2, g3, g4, p1, p2, p3, p4 };
+export const assets = { logo, heroRobot, g1, g2, g4, p1, p2, p3, p4 };
 
 export const navLinks = [
   { to: "/", label: "Home" },
@@ -24,56 +23,112 @@ export const navLinks = [
 ] as const;
 
 export const stats = [
-  { label: "Active Members", value: 120, suffix: "+" },
-  { label: "Projects Built", value: 45, suffix: "+" },
-  { label: "Workshops", value: 30, suffix: "+" },
+  { label: "Active Members", value: 70, suffix: "+" },
+  { label: "Projects Built", value: 10, suffix: "+" },
+  { label: "Competitions", value: 25, suffix: "+" },
   { label: "Achievements", value: 18, suffix: "" },
 ];
 
-export const projects = [
+export interface Project {
+  title: string;
+  image: string;
+  tech: string[];
+  desc: string;
+  details?: string[];
+  applications?: string[];
+  teamSize?: number;
+  duration?: string;
+}
+export interface Project {
+  title: string;
+  image: string;
+  tech: string[];
+  desc: string;
+  details?: string[];       // Technical details bullet points
+  applications?: string[];  // Applications bullet points
+  teamSize?: number;
+  duration?: string;
+}
+ 
+export const projects: Project[] = [
   {
     title: "Humanoid Robot",
     image: p1,
-    tech: ["ROS2",
-    "3D Printing",
-    "Inverse Kinematics",
-    "RGB-D Camera",
-    "AI Integration",
-    "Mechatronics"],
+    tech: ["ROS2", "3D Printing", "Inverse Kinematics", "RGB-D Camera", "AI Integration", "Mechatronics"],
     desc: "A human-like mobile robot with vision + depth sensing, locomotion, manipulation, and autonomy using kinematics/inverse kinematics, mechanically fabricated components, and ROS2 for simulation and control.",
+    details: [
+      "3D-designed and 3D-printed structure for lightweight modular fabrication",
+      "Kinematics & Inverse Kinematics for motion control of limbs and joints",
+      "Vision and Depth Sensing using an RGB-D camera for environment understanding",
+      "ROS2-based Simulation and Control Framework for real-world testing and autonomous behavior",
+      "On-board AI integration for object detection, decision-making, and task execution",
+    ],
+    applications: [
+      "Can assist in routine campus activities like lab deliveries, attendance tracking, or guiding visitors",
+      "Serves as a learning and testing platform for students working on AI and mechatronics systems",
+      "Useful for industrial training and demonstrations, bridging theoretical knowledge with automation practices",
+    ],
+    teamSize: 10,
+    duration: "6–7 months",
   },
   {
     title: "General-Purpose Automated Harvesting Machine",
     image: p2,
-    tech: ["YOLO",
-    "RGB-D Camera",
-    "LiDAR",
-    "GPS",
-    "Linear Actuators",
-    "Robotic Arm"],
+    tech: ["YOLO", "RGB-D Camera", "LiDAR", "GPS", "Linear Actuators", "Robotic Arm"],
     desc: "A multi-crop robotic harvesting system with AI-based crop detection, scissor-lift mechanism and modular end effectors for adaptable harvesting across varied environments.",
+    details: [
+      "Mobile chassis with suspension for uneven terrains, suitable for Indian farming environments",
+      "Height-adjustable platform powered by linear actuators using a scissor lift mechanism",
+      "Interchangeable gripper/cutter tools for various crop types",
+      "RGB-D camera + YOLO-based detection for ripe crop identification",
+      "Navigation & Control: GPS + LiDAR for obstacle avoidance and autonomous movement",
+      "User Interface: wireless control panel (tablet/PC) with live feed, status display, and manual override",
+    ],
+    applications: [
+      "Useful for agricultural robotics research, student projects, and AI testing",
+      "Can demonstrate real-world automation principles within campus projects",
+      "Potential for industry collaboration on cost-effective semi-autonomous farm systems",
+    ],
+    teamSize: 6,
+    duration: "3–4 months",
   },
   {
     title: "Hybrid Lathe Automation System",
     image: p3,
-    tech: ["Arduino",
-    "Raspberry Pi",
-    "Servo Motors",
-    "G-Code",
-    "Encoders",
-    "Touchscreen UI"],
+    tech: ["Arduino", "Raspberry Pi", "Servo Motors", "G-Code", "Encoders", "Touchscreen UI"],
     desc: "An intelligent add-on system that converts traditional manual lathe machines into semi-automated hybrid systems for enhanced precision and productivity.",
+    details: [
+      "Stepper/servo motor integration for tool post and carriage motion",
+      "Arduino/Raspberry Pi-based system with custom G-code interpreter",
+      "Encoders, proximity sensors, and vibration/temperature monitoring",
+      "Touchscreen panel or PC dashboard for parameter input and control",
+      "Limit switches, emergency stop, and self-homing functions",
+    ],
+    applications: [
+      "Provides students with hands-on experience with automation, CNC principles, and smart manufacturing",
+      "Offers cost-effective automation for small and medium machining industries",
+      "Enables repetitive and precise machining operations, forming a base for large-scale automated production",
+    ],
+    teamSize: 6,
+    duration: "6–7 months",
   },
   {
     title: "Arecanut Pesticide Spraying Robot",
     image: p4,
-    tech: ["Co-bot",
-    "Computer Vision",
-    "AI Detection",
-    "Microcontroller",
-    "Pump System",
-    "Mobile Platform"],
+    tech: ["Co-bot", "Computer Vision", "AI Detection", "Microcontroller", "Pump System", "Mobile Platform"],
     desc: "A mobile robotic system that autonomously detects and sprays pesticides on arecanut bunches using vision-based detection and precision targeting.",
+    details: [
+      "Spraying mechanism with pump-based pesticide delivery, controlled by microcontroller/microprocessor",
+      "Custom Co-bot designed and built by students; handles detection and spraying",
+      "Mobile base & platform that moves smoothly and safely around arecanut trees",
+      "Camera or sensor system with AI/image processing to locate ripe bunches",
+    ],
+    applications: [
+      "Reduces labor and enables targeted pesticide spraying for arecanut plantations",
+      "Potential for industry collaboration on cost-effective semi-autonomous farm systems",
+    ],
+    teamSize: 5,
+    duration: "3–4 months",
   },
 ];
 
@@ -102,6 +157,9 @@ export const members = [
   { dept: "Mechanical", count: 18 },
   { dept: "Information Science", count: 8 },
   { dept: "Mechatronics", count: 30},
+  { dept: "Computer Science IoT", count: 4 },
+  { dept: "CS AIML & AIML", count: 4 },
+  { dept: "Robotics & AI", count: 6 },
 ];
 
 export const products = [
@@ -121,7 +179,7 @@ export const timeline = [
   { year: "2025", title: "AI & Drone Division", desc: "Launched AI research wing and drone engineering division." },
 ];
 
-export const gallery = [g1, g2, g3, g4, g1, g2];
+export const gallery = [g1, g2, p3, g4, g1, g2];
 
 export type EventStatus = "upcoming" | "ongoing" | "completed";
  
@@ -142,13 +200,13 @@ export const events: ClubEvent[] = [
   // ── UPCOMING ──────────────────────────────────────────────────────────────
   {
     id: "evt-001",
-    title: "Maze Solver Competition",
-    date: "June 14, 2026",
-    time: "10:00 AM – 4:00 PM",
-    venue: "Innovation Centre, MITE Campus",
-    category: "Competition",
+    title: "Arduino, Microcontrollers & Embedded Systems Workshop",
+    date: "June 23, 2026",
+    time: "1:00 PM – 3:30 PM",
+    venue: "Robo Club PG Block, MITE Campus",
+    category: "Workshop",
     status: "upcoming",
-    desc: "Intra-college maze-solving robot competition. Design a bot that can autonomously navigate and solve a complex maze. Open to all engineering students.",
+    desc: "A hands-on workshop covering Arduino programming, microcontroller basics and embedded systems design. Open to all MITE students with beginner to intermediate experience.",
     registrationUrl: "/contact",
   },
   {
