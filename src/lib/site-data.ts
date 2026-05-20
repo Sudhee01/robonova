@@ -193,10 +193,31 @@ export interface ClubEvent {
   desc: string;
   highlights?: string[]; // bullet points shown on completed events
   registrationUrl?: string; // link for upcoming events
+  image?: string; 
 }
  
 export const events: ClubEvent[] = [
   // ── UPCOMING ──────────────────────────────────────────────────────────────
+  {
+  id: "evt-007",
+  title: "Basics of Microcontrollers & Hands-on Experience with Arduino UNO",
+  date: "May 23, 2026",
+  time: "2:00 PM – 4:00 PM",
+  venue: "Robo Club, MITE Campus",
+  category: "Workshop",
+  status: "upcoming",
+  desc: "A hands-on workshop on microcontroller basics and practical experience with Arduino UNO. Register in teams of 4–5 members. Bring laptops if available — one Arduino UNO per team is sufficient.",
+  highlights: [
+    "Resource Personnel: Dr. Suraj Bhat & Mr. Santhosh S (Dept. of Mechatronics)",
+    "Register in teams of 4–5 members",
+    "Fill in all details correctly in the registration form",
+    "Bring laptops if available",
+    "One Arduino UNO per team is sufficient",
+    "Open to ROBONOVA members only",
+  ],
+  registrationUrl: "/contact",
+  image: "/events/arduino-workshop.jpg",
+},
   {
     id: "evt-001",
     title: "Arduino, Microcontrollers & Embedded Systems Workshop",
