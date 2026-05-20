@@ -2,13 +2,12 @@ import logo from "@/assets/robonova-logo.png";
 import heroRobot from "@/assets/hero-robot.jpg";
 import g1 from "@/assets/gallery-1.png";
 import g2 from "@/assets/gallery-2.png";
-import g4 from "@/assets/gallery-4.jpg";
 import p1 from "@/assets/project-1.jpg";
 import p2 from "@/assets/project-2.png";
 import p3 from "@/assets/project-3.jpg";
 import p4 from "@/assets/project-4.png";
 
-export const assets = { logo, heroRobot, g1, g2, g4, p1, p2, p3, p4 };
+export const assets = { logo, heroRobot, g1, g2, p1, p2, p3, p4 };
 
 export const navLinks = [
   { to: "/", label: "Home" },
@@ -179,7 +178,7 @@ export const timeline = [
   { year: "2025", title: "AI & Drone Division", desc: "Launched AI research wing and drone engineering division." },
 ];
 
-export const gallery = [g1, g2, p3, g4, g1, g2];
+export const gallery = [g1, g2, p3, p2, g2, g1];
 
 export type EventStatus = "upcoming" | "ongoing" | "completed";
  
