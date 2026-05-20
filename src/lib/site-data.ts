@@ -226,7 +226,7 @@ export const events: ClubEvent[] = [
     time: "9:00 AM – 6:00 PM",
     venue: "Main Auditorium, MITE",
     category: "Competition",
-    status: "completed",
+    status: "upcoming",
     desc: "Intra-college robo war competition open to all engineering colleges. Prizes worth ₹50,000.",
     registrationUrl: "/contact",
   },
