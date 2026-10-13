@@ -6,6 +6,8 @@ import p1 from "@/assets/project-1.jpg";
 import p2 from "@/assets/project-2.png";
 import p3 from "@/assets/project-3.jpg";
 import p4 from "@/assets/project-4.png";
+import robowars1 from "@/assets/robowars-team-1.jpg";
+import robowars2 from "@/assets/robowars-team-2.jpg";
 import arduinoWorkshop from "/public/events/arduino-workshop.jpeg";
 
 export const assets = { logo, heroRobot, g1, g2, p1, p2, p3, p4, arduinoWorkshop };
@@ -179,7 +181,7 @@ export const timeline = [
   { year: "2025", title: "AI & Drone Division", desc: "Launched AI research wing and drone engineering division." },
 ];
 
-export const gallery = [g1, g2, p3, p2, g2, g1];
+export const gallery = [robowars1, robowars2, g1, g2, p3, p2];
 
 export type EventStatus = "upcoming" | "ongoing" | "completed";
  
@@ -235,6 +237,7 @@ export const events: ClubEvent[] = [
     "Winners receive trophies and certificates",
     ],
     registrationUrl: "/contact",
+    image: robowars2,
   },
   {
     id: "evt-003",
